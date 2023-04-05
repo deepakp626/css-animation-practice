@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Sofia+Sans:wght@600;700&display=swap');
+*{
+font-family: 'Roboto', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    /* box-sizing: border-box; */
+}
+body{
+    background-color: rgb(4,6,47);
+}
+.center {
+    /* border: 2px solid red; */
+    width: 12rem;
+    height: 3rem;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 0.5rem;
+    cursor: pointer;
+    box-shadow: 0px 0px 6rem 0.5rem black;
+    color: white;
+    overflow: hidden;
+    transition:all 0.5s linear;
+}
+.center:hover{
+    background:orange;
+    color:black;
+    box-shadow: 0px 0px 2rem 0.5rem orange;
+    transition:all 0.5s linear;
+}
+ /* animation run but can not visibal  baackground color orange  */
+/* .center:hover span{
+    background:orange;
+} */
+/* pause animation */
+.center:hover span{
+    animation-play-state: paused !important;
+    /* animation: none; */
+}
+.center span:nth-child(1){
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(to right,#ffffff,#474fdf);
+    animation :anim1 2s linear infinite
+}
+@keyframes anim1 {
+    0%{
+        transform:translateX(-100%)
+    }
+    100%{
+        transform:translateX(100%)
+    }
+}
+.center span:nth-child(2){
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 100%;
+    width: 2px;
+    background: linear-gradient(to bottom,#d1c4f0,#474fdf);
+    animation: anim2 1s linear infinite ;
+    animation-delay: 1;
+}
+@keyframes anim2 {
+    0%{
+        transform:translateY(-100%)
+    }
+    100%{
+        transform:translateY(100%)
+    }
+}
+.center span:nth-child(3){
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(to left,#d1c4f0,#474fdf);
+    animation :anim3 2s linear infinite
+}
+@keyframes anim3 {
+    0%{
+        transform:translateX(100%)
+    }
+    100%{
+        transform:translateX(-100%)
+    }
+}
+.center span:nth-child(4){
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 2px;
+    background: linear-gradient(to top,#d1c4f0,#474fdf);
+    animation: anim4 1s linear infinite 1s;
+    animation-delay: 1;
+}
+@keyframes anim4 {
+    0%{
+        transform:translateY(100%)
+    }
+    100%{
+        transform:translateY(-100%)
+    }
+}
